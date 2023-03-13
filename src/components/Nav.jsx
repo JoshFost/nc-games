@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Nav = () => {
   return (
     <nav>
@@ -7,3 +9,5 @@ const Nav = () => {
     </nav>
   );
 };
+
+export default Nav;
