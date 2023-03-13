@@ -1,3 +1,10 @@
+* {
+  text-align: center;
+}
+
+.reviewList {
+  border-bottom: solid black 1px;
+}
 .logo {
   height: 250px;
   width: 250px;
@@ -7,7 +14,14 @@
 }
 
 .App {
-  background-color: rgb(105, 101, 101);
+  background-color: rgb(175, 239, 243);
+}
+.Header {
+}
+
+.reviewList-img {
+  max-width: 100%;
+  height: auto;
 }
 /* .App {
   text-align: center;

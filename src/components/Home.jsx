@@ -4,8 +4,6 @@ import Nav from "./Nav";
 const Home = () => {
   return (
     <div className="home">
-      <Header></Header>
-      <Nav></Nav>
       <img src="src/nc-games-logo.png" className="logo" alt="logo" />
     </div>
   );
