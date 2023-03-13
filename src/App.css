@@ -1,4 +1,15 @@
+.logo {
+  height: 250px;
+  width: 250px;
+}
+.home {
+  text-align: center;
+}
+
 .App {
+  background-color: rgb(105, 101, 101);
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +46,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
