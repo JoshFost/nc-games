@@ -7,7 +7,11 @@ const ReviewCard = ({ reviewList }) => {
         {reviewList.map((review) => {
           return (
             <li className="reviewList" key={review.review_id}>
-              <img className="reviewList-img" src={review.review_img_url} />
+              <img
+                className="reviewList-img"
+                src={review.review_img_url}
+                alt="review logo"
+              />
               <p>Title: {review.title}</p>
               <p>Category: {review.category}</p>
               <p>Designer: {review.designer}</p>
