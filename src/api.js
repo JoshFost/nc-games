@@ -23,9 +23,17 @@ export const updateReviewVotes = (review_id, increment) => {
       return res.data.review;
     });
 };
+// Need to make app.patch  /api/reviews/:review_id/comments end point for comment vote increment
+// export const updateCommentVotes = (comment_id, review_id, increment) => {
+//   return ncApi
+//     .post(`/reviews/${review_id}/${comment_id}`, { inc_votes: increment })
+//     .then((res) => {
+//       return res.data.comment;
+//     });
+// };
 
 export const fetchCommentsByReviewId = (review_id) => {
   return ncApi.get(`/reviews/${review_id}/comments`).then((res) => {
-    return res.data.review;
+    return res.data.comments;
   });
 };

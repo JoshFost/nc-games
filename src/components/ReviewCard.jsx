@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { fetchReviews } from "../api";
 import { Link } from "react-router-dom";
 const ReviewCard = ({ reviewList }) => {
   console.log(reviewList);
