@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
 import { fetchReviews } from "../api";
 
-const ReviewCard = () => {
-  const [reviewList, setReviewList] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+const ReviewCard = ({ reviewList }) => {
+  // const [reviewList, setReviewList] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    setIsLoading(true);
-    fetchReviews().then((reviews) => {
-      setReviewList(reviews);
-      setIsLoading(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   fetchReviews().then((reviews) => {
+  //     setReviewList(reviews);
+  //     setIsLoading(false);
+  //   });
+  // }, []);
 
-  if (isLoading) {
-    return <h2>Loading ...</h2>;
-  }
+  // if (isLoading) {
+  //   return <h2>Loading ...</h2>;
+  // }
   return (
     <div>
       <ul>
