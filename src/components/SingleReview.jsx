@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fetchReviewById } from "../api";
 import { Link } from "react-router-dom";
 import { updateReviewVotes } from "../api";
+import Comments from "./Comments";
 
 const SingleReview = () => {
   const { review_id } = useParams();
@@ -43,6 +44,7 @@ const SingleReview = () => {
         Votes: {review.votes}{" "}
         <button onClick={handleVote}>{hasVoted ? "Undo" : "Vote"}</button>
       </p>
+      <Comments review_id={review_id}></Comments>
       <Link to={`/reviews`}>
         <button>Go Back</button>
       </Link>
