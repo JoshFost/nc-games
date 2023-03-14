@@ -5,6 +5,7 @@ import Reviews from "./components/Reviews";
 import Categories from "./components/Categories";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
+import SingleReview from "./components/SingleReview";
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/reviews" element={<Reviews></Reviews>}></Route>
+        <Route
+          path="/reviews/:review_id"
+          element={<SingleReview></SingleReview>}
+        ></Route>
         <Route path="/categories" element={<Categories></Categories>}></Route>
       </Routes>
     </div>

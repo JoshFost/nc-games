@@ -1,21 +1,8 @@
 import { useState, useEffect } from "react";
 import { fetchReviews } from "../api";
-
+import { Link } from "react-router-dom";
 const ReviewCard = ({ reviewList }) => {
-  // const [reviewList, setReviewList] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
-
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   fetchReviews().then((reviews) => {
-  //     setReviewList(reviews);
-  //     setIsLoading(false);
-  //   });
-  // }, []);
-
-  // if (isLoading) {
-  //   return <h2>Loading ...</h2>;
-  // }
+  console.log(reviewList);
   return (
     <div>
       <ul>
@@ -27,8 +14,9 @@ const ReviewCard = ({ reviewList }) => {
               <p>Category: {review.category}</p>
               <p>Designer: {review.designer}</p>
               <p>Owner: {review.owner}</p>
-              <p>Review: {review.review_body}</p>
-              <p>Votes: {review.votes}</p>
+              <Link to={`/reviews/${review.review_id}`}>
+                <button>See Review</button>
+              </Link>
             </li>
           );
         })}
