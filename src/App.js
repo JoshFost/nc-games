@@ -6,6 +6,7 @@ import Categories from "./components/Categories";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import SingleReview from "./components/SingleReview";
+import CommentAdder from "./components/CommentAdder";
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
           element={<SingleReview></SingleReview>}
         ></Route>
         <Route path="/categories" element={<Categories></Categories>}></Route>
+        <Route
+          path="/reviews/:review_id/comments/add"
+          element={<CommentAdder></CommentAdder>}
+        />
       </Routes>
     </div>
   );
