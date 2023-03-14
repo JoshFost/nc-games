@@ -7,6 +7,7 @@ const Comments = ({ review_id }) => {
 
   useEffect(() => {
     fetchCommentsByReviewId(review_id).then((commentsData) => {
+      console.log(commentsData, "comments data");
       setComments(commentsData);
     });
   }, [review_id]);

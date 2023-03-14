@@ -34,6 +34,7 @@ export const updateReviewVotes = (review_id, increment) => {
 
 export const fetchCommentsByReviewId = (review_id) => {
   return ncApi.get(`/reviews/${review_id}/comments`).then((res) => {
+    console.log(res.data.comments);
     return res.data.comments;
   });
 };
