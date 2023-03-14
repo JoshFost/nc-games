@@ -1,4 +1,29 @@
+* {
+  text-align: center;
+}
+
+.reviewList {
+  border-bottom: solid black 1px;
+}
+.logo {
+  height: 250px;
+  width: 250px;
+}
+.home {
+  text-align: center;
+}
+
 .App {
+  background-color: rgb(175, 239, 243);
+}
+.Header {
+}
+
+.reviewList-img {
+  max-width: 100%;
+  height: auto;
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +60,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
