@@ -15,6 +15,13 @@ export const fetchReviewById = (review_id) => {
     return res.data.review;
   });
 };
+
+export const fetchCategories = () => {
+  return ncApi.get("/categories").then((res) => {
+    console.log(res.data.categories);
+    return res.data.categories;
+  });
+};
 //patch
 export const updateReviewVotes = (review_id, increment) => {
   return ncApi

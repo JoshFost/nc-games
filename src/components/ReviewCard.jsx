@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 const ReviewCard = ({ reviewList }) => {
-  console.log(reviewList);
   return (
     <div>
       <ul>
