@@ -15,16 +15,17 @@ const Comments = ({ review_id }) => {
     });
   }, [review_id]);
 
-  const handleAddComment = (comment, author) => {
-    postCommentByReviewId(review_id, { body: comment, username: author })
-      .then((newComment) => {
-        setComments((previousComments) => [newComment, ...previousComments]);
-        setShowCommentAdder(false);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  //   const handleAddComment = (comment, author) => {
+  //     // console.log(review_id, "review id");
+  //     postCommentByReviewId(review_id, { username: author, body: comment })
+  //       .then((newComment) => {
+  //         setComments((previousComments) => [newComment, ...previousComments]);
+  //         setShowCommentAdder(false);
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  //   };
 
   return (
     <div>
@@ -38,14 +39,20 @@ const Comments = ({ review_id }) => {
             ></CommentCard>
           );
         })}
-      {showCommentAdder && (
-        <CommentAdder handleAddComment={handleAddComment}></CommentAdder>
-      )}
+      {/* {showCommentAdder && ( */}
+      <CommentAdder
+        review_id={review_id}
+        setComments={setComments}
+        //   handleAddComment={(author, comment) =>
+        //     handleAddComment(author, comment, setComments)
+        //   }
+      ></CommentAdder>
+      {/* )}
       {!showCommentAdder && (
-        <Link to={`/reviews/${review_id}/comments/add`}>
-          <button type="button">Add Comment</button>
-        </Link>
-      )}
+        <Link to={`/reviews/${review_id}/comments`}>
+          <button>Add Comment</button>
+        </Link> */}
+      {/* )} */}
     </div>
   );
 };

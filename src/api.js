@@ -38,9 +38,11 @@ export const fetchCommentsByReviewId = (review_id) => {
   });
 };
 
-export const postCommentByReviewId = (review_id, comment) => {
-  return ncApi.post(`/reviews/${review_id}/comments`, comment).then((res) => {
-    console.log(review_id, "<<<review id in api");
-    return res.data.comment;
-  });
+export const postCommentByReviewId = (review_id, author, comment) => {
+  return ncApi
+    .post(`/reviews/${review_id}/comments`, { username: author, body: comment })
+    .then((res) => {
+      console.log(res.data.comment, "<<<api console");
+      return res.data.comment;
+    });
 };

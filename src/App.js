@@ -22,7 +22,7 @@ function App() {
         ></Route>
         <Route path="/categories" element={<Categories></Categories>}></Route>
         <Route
-          path="/reviews/:review_id/comments/add"
+          path="/reviews/:review_id/comments"
           element={<CommentAdder></CommentAdder>}
         />
       </Routes>

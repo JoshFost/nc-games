@@ -2,7 +2,7 @@ import { useState } from "react";
 import { postCommentByReviewId } from "../api";
 import { Link } from "react-router-dom";
 
-const CommentAdder = (review_id, setComments) => {
+const CommentAdder = ({ review_id, setComments }) => {
   const [comment, setComment] = useState("");
   const [author, setAuthor] = useState("");
   const [posted, setPosted] = useState("");
@@ -10,32 +10,25 @@ const CommentAdder = (review_id, setComments) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (comment === "" || author === "") {
-      setPosted("Please fill in all the fields");
+      setPosted(<p>Please fill in all the fields</p>);
     } else {
-      setPosted("Posing Comment...");
-      postCommentByReviewId(review_id, { body: comment, username: author })
+      setPosted(<p>Posing Comment...</p>);
+      postCommentByReviewId(review_id, author, comment)
         .then((newComment) => {
           setComment("");
           setAuthor("");
-          setPosted("Comment posted successfully!");
+          setPosted(<p>Comment posted successfully!</p>);
           setComments((previousComments) => [newComment, ...previousComments]);
         })
         .catch((error) => {
-          setPosted("An error occured while posting the comment");
+          setPosted(<p>An error occurred while posting the comment</p>);
         });
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="comment">Comment: </label>
-      <textarea
-        id="comment"
-        placeholder="Write your comment here..."
-        value={comment}
-        onChange={(event) => setComment(event.target.value)}
-      ></textarea>
-
+      <h3>Write a comment...</h3>
       <label htmlFor="name">Username: </label>
       <textarea
         id="name"
@@ -43,9 +36,16 @@ const CommentAdder = (review_id, setComments) => {
         value={author}
         onChange={(event) => setAuthor(event.target.value)}
       ></textarea>
-      <Link to={`/reviews/${review_id}`}>
-        <button type="submit">Submit</button>
-      </Link>
+
+      <label htmlFor="comment">Comment: </label>
+      <textarea
+        id="comment"
+        placeholder="Write your comment here..."
+        value={comment}
+        onChange={(event) => setComment(event.target.value)}
+      ></textarea>
+      {posted ? <div>{posted}</div> : null}
+      <button>Submit</button>
     </form>
   );
 };
