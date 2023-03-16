@@ -15,7 +15,12 @@ const Reviews = () => {
   }, []);
 
   if (isLoading) {
-    return <h2>Loading ...</h2>;
+    return (
+      <div className="loader">
+        <span className="loader-text">loading</span>
+        <span className="load"></span>
+      </div>
+    );
   }
   return (
     <div>

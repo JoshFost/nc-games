@@ -15,6 +15,13 @@ export const fetchReviewById = (review_id) => {
     return res.data.review;
   });
 };
+
+export const fetchCategories = () => {
+  return ncApi.get("/categories").then((res) => {
+    console.log(res.data.categories);
+    return res.data.categories;
+  });
+};
 //patch
 export const updateReviewVotes = (review_id, increment) => {
   return ncApi
@@ -34,7 +41,15 @@ export const updateReviewVotes = (review_id, increment) => {
 
 export const fetchCommentsByReviewId = (review_id) => {
   return ncApi.get(`/reviews/${review_id}/comments`).then((res) => {
-    console.log(res.data.comments);
     return res.data.comments;
   });
+};
+
+export const fetchReviewsByCategory = (category) => {
+  return ncApi
+
+    .get("/reviews", { params: { category: category } })
+    .then((res) => {
+      return res.data.reviews;
+    });
 };
