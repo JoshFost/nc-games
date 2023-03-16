@@ -22,7 +22,7 @@ function App() {
         ></Route>
         <Route path="/categories" element={<Categories></Categories>}></Route>
         <Route
-          path="/categories/reviews"
+          path="/categories/:categorySlug/reviews"
           element={<ReviewByCategory></ReviewByCategory>}
         ></Route>
       </Routes>

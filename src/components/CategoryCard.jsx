@@ -6,11 +6,15 @@ const CategoryCard = ({ categoriesList }) => {
       <ul>
         {categoriesList.map((category) => {
           return (
-            <li className="categoriesList" key={category.category_id}>
-              <p>Category: {category.slug}</p>
-              <p>Description: {category.description}</p>
+            <li className="categoriesList" key={category.slug}>
+              <p className="category-title">Category:</p>
+              <p> {category.slug}</p>
+              <p className="category-title">Description: </p>
+              <p>{category.description}</p>
 
-              <Link to={`categories/reviews`}>
+              <Link
+                to={`/categories/${category.slug}/reviews?category=${category.slug}`}
+              >
                 <button>See Reviews</button>
               </Link>
             </li>
