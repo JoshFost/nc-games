@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import SingleReview from "./components/SingleReview";
 import CommentAdder from "./components/CommentAdder";
+import ReviewByCategory from "./components/ReviewByCategory";
+
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
           path="/reviews/:review_id/comments"
           element={<CommentAdder></CommentAdder>}
         />
+          path="/categories/:categorySlug/reviews"
+          element={<ReviewByCategory></ReviewByCategory>}
+        ></Route>
       </Routes>
     </div>
   );
