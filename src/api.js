@@ -45,13 +45,14 @@ export const fetchCommentsByReviewId = (review_id) => {
   });
 };
 
-
 export const postCommentByReviewId = (review_id, author, comment) => {
   return ncApi
     .post(`/reviews/${review_id}/comments`, { username: author, body: comment })
     .then((res) => {
       console.log(res.data.comment, "<<<api console");
       return res.data.comment;
+    });
+};
 
 export const fetchReviewsByCategory = (category) => {
   return ncApi
@@ -59,6 +60,5 @@ export const fetchReviewsByCategory = (category) => {
     .get("/reviews", { params: { category: category } })
     .then((res) => {
       return res.data.reviews;
-
     });
 };
