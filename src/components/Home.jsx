@@ -1,10 +1,9 @@
-import Header from "./Header";
-import Nav from "./Nav";
+import logo from "../images.png";
 
 const Home = () => {
   return (
     <div className="home">
-      <img src="../981-consultation-lineal.gif" className="logo" alt="logo" />
+      <img src={logo} className="logo" alt="logo" />
     </div>
   );
 };

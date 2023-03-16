@@ -1,0 +1,25 @@
+body {
+  background: #272727;
+  font-family: "Montserrat", sans-serif;
+  border-bottom-style: dotted 10px rgb(252, 7, 7);
+}
+
+.navMenu a {
+  color: goldenrod;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 150px;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+  border-top: dashed black 1px;
+  border-bottom: dashed black 1px;
+
+  padding: 10px;
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
+}

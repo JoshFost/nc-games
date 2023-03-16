@@ -1,29 +1,68 @@
 * {
   text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .reviewList {
-  border-bottom: solid black 1px;
+  border: solid black 5px;
+  box-shadow: 10px 10px 10px;
+  padding: 50px;
+  margin: 50px;
+  list-style-type: none;
+  background-color: rgb(255, 203, 72);
+
   list-style-type: none;
   text-align: center;
 }
+.review-headings {
+  font-weight: bold;
+  font-style: italic;
+  font-size: large;
+}
 .logo {
-  height: 300px;
-  width: 300px;
+  height: 600px;
+  width: 600px;
+
+  border: solid rgb(0, 0, 0);
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-top: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.header {
+  font-size: 4rem;
+  font-weight: 1000;
+
+  color: goldenrod;
+  text-align: center;
+  text-shadow: 1px -1px black, -10px 10px black;
+}
+
+.header h1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  /* position: fixed;
+  width: 100vw;
+  padding-top: 64px; */
 }
 .home {
   text-align: center;
+  color: goldenrod;
+  background-color: rgb(101, 237, 247);
 }
 
 .App {
-  background-color: rgb(175, 239, 243);
-}
-.Header {
+  background-color: rgb(101, 237, 247);
+  padding-bottom: 20px;
 }
 
 .reviewList-img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
+  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .comments {
@@ -31,7 +70,13 @@
 }
 
 .categoriesList {
-  border-bottom: solid black 1px;
+  border: solid black 5px;
+  box-shadow: 10px 10px 10px;
+  padding: 50px;
+  margin: 50px;
+  margin-bottom: 10px;
+  list-style-type: none;
+  background-color: rgb(255, 203, 72);
 }
 .category-title {
   font-weight: bold;
@@ -43,6 +88,31 @@
 }
 .categoryReviews ul {
   list-style-type: none;
+}
+
+.commentsList {
+  padding: 5%;
+  margin-top: none;
+  border: 10px dotted black;
+  border-radius: 20%;
+  background-color: lightslategray;
+}
+
+.commentsList h3 {
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.button {
+  border-color: black 10px;
+  box-shadow: 0px 1px 5px 5px rgb(0, 0, 0);
+  border-radius: 10%;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  background-color: rgb(101, 237, 247);
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .loader {
@@ -165,35 +235,13 @@
   }
 }
 
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {

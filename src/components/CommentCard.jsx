@@ -4,6 +4,7 @@ import { useState } from "react";
 const CommentCard = ({ comment }) => {
   return (
     <div className="comments">
+      <p className="category-title">Comment:</p>
       <p>{comment.body}</p>
       <p>Author : {comment.author}</p>
       <p>Votes: {comment.votes}</p>

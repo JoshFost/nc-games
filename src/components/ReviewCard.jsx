@@ -11,12 +11,24 @@ const ReviewCard = ({ reviewList }) => {
                 src={review.review_img_url}
                 alt="review logo"
               />
-              <p>Title: {review.title}</p>
-              <p>Category: {review.category}</p>
-              <p>Designer: {review.designer}</p>
-              <p>Owner: {review.owner}</p>
+              <p>
+                <span className="review-headings">Title: </span>
+                {review.title}
+              </p>
+              <p>
+                <span className="review-headings">Category: </span>
+                {review.category}
+              </p>
+              <p>
+                <span className="review-headings">Designer: </span>
+                {review.designer}
+              </p>
+              <p>
+                <span className="review-headings">Owner: </span>
+                {review.owner}
+              </p>
               <Link to={`/reviews/${review.review_id}`}>
-                <button>See Review</button>
+                <button className="button">See Review</button>
               </Link>
             </li>
           );

@@ -28,7 +28,7 @@ const Comments = ({ review_id }) => {
   //   };
 
   return (
-    <div>
+    <div className="commentsList">
       <h3>Comments:</h3>
       {comments &&
         comments.map((comment) => {

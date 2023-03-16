@@ -15,7 +15,7 @@ const CategoryCard = ({ categoriesList }) => {
               <Link
                 to={`/categories/${category.slug}/reviews?category=${category.slug}`}
               >
-                <button>See Reviews</button>
+                <button className="button">See Reviews</button>
               </Link>
             </li>
           );

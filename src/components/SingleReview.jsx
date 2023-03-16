@@ -50,7 +50,7 @@ const SingleReview = () => {
   }
 
   return (
-    <div>
+    <div className="categoriesList">
       <h2>{review.title}</h2>
       <img
         className="reviewList-img"
@@ -65,7 +65,7 @@ const SingleReview = () => {
       </p>
       <Comments review_id={review_id}></Comments>
       <Link to={`/reviews`}>
-        <button>Go Back</button>
+        <button className="button">Go Back</button>
       </Link>
     </div>
   );

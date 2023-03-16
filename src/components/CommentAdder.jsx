@@ -51,7 +51,9 @@ const CommentAdder = ({ review_id, setComments }) => {
         onChange={(event) => setComment(event.target.value)}
       ></textarea>
       {posted ? <div>{posted}</div> : null}
-      <button disabled={isPosting}>Submit</button>
+      <button className="button" disabled={isPosting}>
+        Submit
+      </button>
     </form>
   );
 };

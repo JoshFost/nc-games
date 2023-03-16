@@ -24,7 +24,7 @@ const Reviews = () => {
   }
   return (
     <div>
-      <h2>Here is a list of reviews</h2>
+      <h2>Here is a list of reviews:</h2>
       <ReviewCard reviewList={reviewList}></ReviewCard>
     </div>
   );

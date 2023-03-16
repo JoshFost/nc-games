@@ -30,11 +30,19 @@ const ReviewByCategory = () => {
   return (
     <div className="categoryReviews">
       <h3>Reviews for {categorySlug}: </h3>
+
       <ul>
         {reviewList.map((review) => {
           return (
-            <li key={review.review_id}>
+            <li className="categoriesList" key={review.review_id}>
+              <p className="category-title">Title:</p>
               <p>{review.title}</p>
+              <img
+                className="reviewList-img"
+                src={review.review_img_url}
+                alt="review logo"
+              />
+              <p className="category-title">Review: </p>
               <p>{review.review_body}</p>
               <p>Author: {review.owner}</p>
               <p>Created: {review.created_at}</p>
