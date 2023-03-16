@@ -7,6 +7,7 @@ const CommentAdder = ({ review_id, setComments }) => {
   // const [author, setAuthor] = useState("");
   const user = "tickle122";
   const [posted, setPosted] = useState("");
+  const [isPosting, setIsPosting] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,9 +15,11 @@ const CommentAdder = ({ review_id, setComments }) => {
       // || author === ""
       setPosted(<p>Please fill in all the fields</p>);
     } else {
+      setIsPosting(true);
       setPosted(<p>Posing Comment...</p>);
       postCommentByReviewId(review_id, user, comment)
         .then((newComment) => {
+          setIsPosting(false);
           setComment("");
           // setAuthor("");
           setPosted(<p>Comment posted successfully!</p>);
@@ -24,6 +27,7 @@ const CommentAdder = ({ review_id, setComments }) => {
         })
         .catch((error) => {
           setPosted(<p>An error occurred while posting the comment</p>);
+          setIsPosting(false);
         });
     }
   };
@@ -47,7 +51,7 @@ const CommentAdder = ({ review_id, setComments }) => {
         onChange={(event) => setComment(event.target.value)}
       ></textarea>
       {posted ? <div>{posted}</div> : null}
-      <button>Submit</button>
+      <button disabled={isPosting}>Submit</button>
     </form>
   );
 };
