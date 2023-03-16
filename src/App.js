@@ -9,7 +9,6 @@ import SingleReview from "./components/SingleReview";
 import CommentAdder from "./components/CommentAdder";
 import ReviewByCategory from "./components/ReviewByCategory";
 
-
 function App() {
   return (
     <div className="App">
@@ -27,9 +26,10 @@ function App() {
           path="/reviews/:review_id/comments"
           element={<CommentAdder></CommentAdder>}
         />
+        <Route
           path="/categories/:categorySlug/reviews"
           element={<ReviewByCategory></ReviewByCategory>}
-        ></Route>
+        />
       </Routes>
     </div>
   );
