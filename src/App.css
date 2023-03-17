@@ -234,6 +234,41 @@
     width: 16px;
   }
 }
+@media screen and (max-width: 600px) {
+  .logo {
+    height: 200px;
+    width: 200px;
+
+    border: solid rgb(0, 0, 0);
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 6.4px;
+    background-color: rgb(255, 255, 255);
+  }
+  .header {
+    font-size: 2rem;
+  }
+  .reviewList {
+    padding: 20px;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 20px;
+    flex: auto;
+  }
+  .button {
+    padding: 10px;
+  }
+  .categoriesList {
+    padding: 20px;
+    margin: 20px;
+  }
+  .category-title {
+    font-size: 18px;
+  }
+  .app {
+  }
+}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
