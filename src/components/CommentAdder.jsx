@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { postCommentByReviewId } from "../api";
-import { Link } from "react-router-dom";
 
 const CommentAdder = ({ review_id, setComments }) => {
   const [comment, setComment] = useState("");

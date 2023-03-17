@@ -63,6 +63,7 @@ const SingleReview = () => {
         Votes: {review.votes}{" "}
         <button onClick={handleVote}>{hasVoted ? "Undo" : "Vote"}</button>
       </p>
+      {error && <div>{error}</div>}
       <Comments review_id={review_id}></Comments>
       <Link to={`/reviews`}>
         <button className="button">Go Back</button>

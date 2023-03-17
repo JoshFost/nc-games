@@ -1,5 +1,4 @@
 // import { updateCommentVotes } from "../api";
-import { useState } from "react";
 
 const CommentCard = ({ comment }) => {
   return (

@@ -2,12 +2,9 @@ import { fetchCommentsByReviewId } from "../api";
 import { useState, useEffect } from "react";
 import CommentCard from "./CommentCard";
 import CommentAdder from "./CommentAdder";
-import { postCommentByReviewId } from "../api";
-import { Link } from "react-router-dom";
 
 const Comments = ({ review_id }) => {
   const [comments, setComments] = useState([]);
-  const [showCommentAdder, setShowCommentAdder] = useState(false);
 
   useEffect(() => {
     fetchCommentsByReviewId(review_id).then((commentsData) => {
